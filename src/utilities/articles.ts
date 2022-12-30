@@ -1,6 +1,6 @@
-import * as storageUtility from "./storage";
 import Parser from 'rss-parser';
-import { Buffer } from "buffer";
+import { Buffer } from 'buffer';
+import { storeWithExpiry, getWithExpiry } from './storage';
 
 const FEED_PARSER: Parser = new Parser();
 const CORS_PROXY = Buffer.from(
@@ -13,7 +13,7 @@ async function getContent(
   json: boolean,
   cacheTime?: number
 ) {
-  const storedData = await storageUtility.getWithExpiry(url);
+  const storedData = await getWithExpiry(url);
   if (cacheTime && storedData) {
     return storedData;
   };
@@ -21,7 +21,7 @@ async function getContent(
   const data = json ? await response.json() : await response.text();
   if (response.ok) {
     if (cacheTime) {
-      await storageUtility.storeWithExpiry(url, data, cacheTime);
+      await storeWithExpiry(url, data, cacheTime);
   }   
     return data;
   } else {
