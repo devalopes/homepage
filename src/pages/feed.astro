@@ -1,14 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import NewsFeed from "../components/NewsFeed.svelte";
+import NewsFeed from "../components/NewsFeed.astro";
 
 ---
 
 <Layout >
   <main class="flex-1">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 place-items-center place-content-center h-full">
-      <NewsFeed client:only url="https://hnrss.org/frontpage"/>
-      <NewsFeed client:only url="https://feeds.arstechnica.com/arstechnica/index"/>
+      <NewsFeed feedName="Hacker News" url="https://hnrss.org/frontpage"/>
+      <NewsFeed feedName="Ars Technica" url="https://feeds.arstechnica.com/arstechnica/index"/>
+      <NewsFeed feedName="Phoronix" url="https://www.phoronix.com/rss.php"/>
+      <NewsFeed feedName="The Verge"url="https://www.theverge.com/rss/index.xml"/>
+      <NewsFeed feedName="Wired" url="https://www.wired.com/feed"/>
+      <NewsFeed feedName="Engadget" url="https://www.engadget.com/rss.xml"/>
+      <NewsFeed feedName="LWN" url="https://lwn.net/headlines/rss"/>
+      <NewsFeed feedName="Cloudflare Blog" url="https://blog.cloudflare.com/rss/"/>
+      <NewsFeed feedName="NPR" url="https://feeds.npr.org/1001/rss.xml"/>
+      <NewsFeed feedName="The Onion" url="https://www.theonion.com/rss"/>
+      <NewsFeed feedName="New Scientist" url="https://www.newscientist.com/feed/home/"/>
+      <NewsFeed feedName="Phys" url="https://phys.org/rss-feed/"/>
+      <NewsFeed feedName="Quanta" url="https://api.quantamagazine.org/feed"/>
+      <NewsFeed feedName="PC Gamer" url="https://www.pcgamer.com/rss/"/>
+      <NewsFeed feedName="IEEE Spectrum" url="https://spectrum.ieee.org/feeds/feed.rss"/>
+      <NewsFeed feedName="It's FOSS" url="https://itsfoss.com/feed/"/>
+      <NewsFeed feedName="Hackaday" url="https://hackaday.com/blog/feed/"/>
+      <NewsFeed feedName="Nautilus" url="https://nautil.us/feed/"/>
+      <NewsFeed feedName="Scientific American" url="http://rss.sciam.com/ScientificAmerican-Global/"/>
     </div>
   </main>
 </Layout>
