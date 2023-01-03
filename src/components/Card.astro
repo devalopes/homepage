@@ -8,11 +8,11 @@ export interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg bg-ui.line hover:text-white hover:border-2 hover:border-syntax.hover">
+<div class="w-2/3 rounded overflow-hidden shadow-lg bg-ui.line hover:text-syntax.hover">
   <a href={href} target="_blank">
     <div class="px-6 py-4">
-      <div class="font-bold text-xl text-center mb-2 ">{title}</div>
-      <p class="text-syntax.muted text-base">
+      <div class="font-bold text-xl text-center mb-2">{title}</div>
+      <p class="text-syntax.muted text-base text-center">
         {body}
       </p>
     </div>

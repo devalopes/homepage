@@ -51,8 +51,8 @@
           ? 'flex'
           : 'hidden'}"
       >
-        <a class="hover:text-syntax.hover" href="/feed">Feed</a>
-        <a class="hover:text-syntax.hover" href="/about">About</a>
+        <a class="hover:text-syntax.hover" href="/feed">News Feed</a>
+        <a class="hover:text-syntax.hover" href="/recipes">Recipes</a>
         <form
           class="flex items-center space-x-2 border-2 border-syntax.hover rounded-full p-2"
         >
@@ -71,7 +71,7 @@
             />
           </svg>
           <input
-            class="w-full outline-none bg-zinc-900"
+            class="w-full outline-none bg-ui.bg"
             type="text"
             placeholder="Search"
           />
