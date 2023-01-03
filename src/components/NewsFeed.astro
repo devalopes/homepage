@@ -16,7 +16,7 @@ const news = rss ? rss.items : [];
         {feedName}
       </h1>
     </a>
-    <div class="max-h-64 min-w-full overflow-y-scroll border-2 border-gray-900">
+    <div class="max-h-64 min-w-full overflow-y-scroll border-2 border-gray-900 shadow-lg border-double">
       {news.map((article => (
         <li class="hover:text-syntax.hover py-2">
           <p class="float-left text-sm text-gray-500 pr-2">
